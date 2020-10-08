@@ -105,6 +105,11 @@
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>${maven.shade.version}</version>
+        <configuration>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+          <shadedArtifactAttached>true</shadedArtifactAttached>
+          <shadedClassifierName>main</shadedClassifierName>
+        </configuration>
         <executions>
           <execution>
             <phase>package</phase>
